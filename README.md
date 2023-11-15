@@ -14,7 +14,7 @@ This pipeline performs the mapping of sgRNA sequences to the GRCh38 reference ge
 * Annotation of alignment and comparison of gene names
 * Retrieval of TCGA-BRCA gene expression
 
-![alt text](https://github.com/lourdesrosano/sgRNA_library_characterization/tree/main/images/rulegraph.png?raw=true)
+![alt text](https://github.com/lourdesrosano/sgRNA_library_characterization/blob/main/images/rulegraph.png?raw=true)
 
 
 ## Installations
