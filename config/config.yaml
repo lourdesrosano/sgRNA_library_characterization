@@ -1,0 +1,12 @@
+# Inputs and outputs
+input_output:
+    input_dir: /path/to/input_dir/
+    output_dir: /path/to/pipeline_output/
+    library_map: library_map.tsv
+    tcga_samples: tcga_samples.tsv
+    tmp_dir: /path/to/pipeline_tmp/
+
+# Reference sequences, databases, helper files, etc.
+data_resources:
+    reference_genome: /path/to/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna
+    gencode_bed: ../resources/gencode.v44.primary_assembly.annotation.genes.ucsc.bed

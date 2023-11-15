@@ -1,0 +1,6 @@
+name: samtools_v1.18
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - samtools=1.18

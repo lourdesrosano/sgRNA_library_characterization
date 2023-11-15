@@ -1,0 +1,9 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+description: an entry in the library map
+properties:
+  library_id:
+    type: string
+    description: library name/identifier
+
+required:
+  - library_id

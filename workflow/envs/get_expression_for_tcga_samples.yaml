@@ -1,0 +1,9 @@
+name: get_expression_for_tcga_samples
+channels:
+  - bioconda
+  - conda-forge
+  - r
+dependencies:
+  - r-base
+  - r-optparse
+  - bioconductor-tcgabiolinks

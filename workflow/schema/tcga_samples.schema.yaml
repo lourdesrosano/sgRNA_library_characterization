@@ -1,0 +1,9 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+description: an entry in the TCGA sample sheet
+properties:
+  sample:
+    type: string
+    description: TCGA sample name/identifier
+
+required:
+  - sample
