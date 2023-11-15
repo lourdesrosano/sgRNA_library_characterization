@@ -109,8 +109,8 @@ Note that if the pipeline is run on a compute cluster with a job scheduling syst
 ### Relevant output
 
 * Directory `bwa`: one `.bam.flagstat` file per library analyzed, listing the number of sgRNA sequence alignments per FLAG type (e.g. mapped, duplicates, primary, secondary, etc.).
-* Directory `gene_mapping`: one `.mapping_info.tsv` file per library analyzed, listing the chromosome name, start position, end position and strand of each mapped sgRNA sequence.
-* Directory `gene_expression`: one `.gene_expression.mapped_genes.tsv` file per library analyzed and TCGA sample of interest, containing the matrix of gene expression for the given TCGA sample and the gene IDs annotated based on the mapped sgRNA sequences.
+* Directory `gene_mapping`: one `.mapping_info.tsv` file per library analyzed, listing the chromosome name, start position, end position and strand of each mapped sgRNA sequence. See file [results/library.mapping_info.tsv](results/library.mapping_info.tsv). Also, one `.gene_comparison.tsv` file per library analyzed, listing the results from the gene annotation comparison (alignment-based vs. FASTA description-based gene annotations). See file [results/library.gene_comparison.tsv](results/library.gene_comparison.tsv).
+* Directory `gene_expression`: one `.gene_expression.mapped_genes.tsv` file per library analyzed and TCGA sample of interest, containing the matrix of gene expression for the given TCGA sample and the gene IDs annotated based on the mapped sgRNA sequences. See files for samples [TCGA-A7-A13D-01A-13R-A12P-07](results/TCGA-A7-A13D-01A-13R-A12P-07.library.gene_expression.mapped_genes.tsv) and [TCGA-E9-A1RH-11A-34R-A169-07](results/TCGA-E9-A1RH-11A-34R-A169-07.library.gene_expression.mapped_genes.tsv).
 
 
 ### Future development
