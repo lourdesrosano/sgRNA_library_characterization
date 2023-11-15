@@ -17,11 +17,11 @@ This pipeline performs the mapping of sgRNA sequences to the GRCh38 reference ge
 
 ## Installations
 
-### 1) Install Conda/Mamba
+### Conda/Mamba
 
 Installation instructions can be found in the [Conda documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html).
 
-### 2) Install Snakemake
+### Snakemake
 
 Installation instructions can be found in the [Snakemake documentation](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html).
 
@@ -42,18 +42,17 @@ The pipeline expects one Multi FASTA file per library, and assumes the input FAS
 
 - **Config file:**
   - Input directory  
-    Before running the pipeline, file `config/config.yaml` needs to be adapted to contain the **full paths to the inputs and outputs** for the intended analysis (provided in the
+    Before running the pipeline, file [config/config.yaml](config/config.yaml) needs to be adapted to contain the **full paths to the inputs and outputs** for the intended analysis (provided in the
     first section `input_output`).
   - Resource information  
     In addition to the input and output paths, further resource information must be provided in the section `data_resources`, namely, the reference genome file and the gencode gene annotation file.
 
 - **Library map:**
-File must be provided in the config file (`library_map`), and corresponds to a list of the library ids to be analyzed (one row per library id).
-The library map must contain a column with the header `library_id`. This ID will be used to name files and identify the library throughout the pipeline. See `config/library_map.tsv` for a template of the required format for the library map.
+File must be provided in the config file (`library_map`), and corresponds to a list of the library ids to be analyzed (one row per library id). The library map must contain a column with the header `library_id`. This ID will be used to name files and identify the library throughout the pipeline. See file [config/library_map.tsv](config/library_map.tsv) for a template of the required format for the library map.
+
 
 - **TCGA sample map:**
-File must be provided in the config file (`tcga_samples`), and corresponds to a list of the TCGA sample ids to be analyzed (one row per sample id).
-The sample map must contain a column with the header `sample`. These IDs will be used to retrieve gene expression data from the TCGA-BRCA dataset. See `config/tcga_sample_map.tsv` for a template of the required format for the TCGA sample map.
+File must be provided in the config file (`tcga_samples`), and corresponds to a list of the TCGA sample ids to be analyzed (one row per sample id). The sample map must contain a column with the header `sample`. These IDs will be used to retrieve gene expression data from the TCGA-BRCA dataset. See file [config/tcga_sample_map.tsv](config/tcga_sample_map.tsv) for a template of the required format for the TCGA sample map.
 
 
 
@@ -89,10 +88,10 @@ The available file was generated as follows:
 ### Running sgRNA_library_characterization
 
 - **Software dependencies with Conda:**
-This pipeline follows the best practices of the Snakemake workflow manager in providing the software needed to run the pipeline in per-rule conda environments. Those environmnents are specified under `envs/` in yaml files that are named `{rule_name}.yaml`. The easiest way to install and use the software is by running Snakemake with parameter `--use-conda`. Snakemake will try to find the environments of the yaml files the rules point to, and install them if they are not already available. The directory for installing the conda environments can be specified with the `--conda-prefix` parameter.
+This pipeline follows the best practices of the Snakemake workflow manager in providing the software needed to run the pipeline in per-rule conda environments. Those environmnents are specified under directory [envs/](workflow/envs/) in yaml files that are named `{rule_name}.yaml`. The easiest way to install and use the software is by running Snakemake with parameter `--use-conda`. Snakemake will try to find the environments of the yaml files the rules point to, and install them if they are not already available. The directory for installing the conda environments can be specified with the `--conda-prefix` parameter.
 
 - **Software dependencies with Docker/Singularity:**
-As an alternative to using Conda, it is also possible to define a (docker) container and execute Snakemake with parameter `--use-singularity`, which will execute the job within a container that is spawned from a given image. Instructions for automatically building an image with Docker are provided in a [Dockerfile](Dockerfile). For more detailed information, please refer to the [Snakemake documentation](https://snakemake.readthedocs.io/en/stable/snakefiles/deployment.html).
+As an alternative to using Conda, it is also possible to define a (docker) container and execute Snakemake with parameter `--use-singularity`, which will execute the job within a container that is spawned from a given image. Instructions for automatically building an image with Docker are provided in a [Dockerfile](Dockerfile). For more detailed information, please refer to the corresponding [Snakemake documentation](https://snakemake.readthedocs.io/en/stable/snakefiles/deployment.html).
 
 - **Set pipeline location:**
 Parameter `--directory` must point to the `workflow` repository of the pipeline (i.e. corresponding location to the copy of the Git repository in the user's machine). This is necessary in order to ensure that the relative paths to the pipeline scripts can be correctly resolved and interpreted by Snakemake.
