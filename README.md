@@ -52,7 +52,7 @@ File must be provided in the config file (`library_map`), and corresponds to a l
 
 
 - **TCGA sample map:**
-File must be provided in the config file (`tcga_samples`), and corresponds to a list of the TCGA sample ids to be analyzed (one row per sample id). The sample map must contain a column with the header `sample`. These IDs will be used to retrieve gene expression data from the TCGA-BRCA dataset. See file [config/tcga_sample_map.tsv](config/tcga_sample_map.tsv) for a template of the required format for the TCGA sample map.
+File must be provided in the config file (`tcga_samples`), and corresponds to a list of the TCGA sample ids to be analyzed (one row per sample id). The sample map must contain a column with the header `sample`. These IDs will be used to retrieve gene expression data from the TCGA-BRCA dataset. See file [config/tcga_samples.tsv](config/tcga_samples.tsv) for a template of the required format for the TCGA sample map.
 
 
 
@@ -60,7 +60,7 @@ File must be provided in the config file (`tcga_samples`), and corresponds to a 
 
 These correspond to files that are required for running the pipeline, which are listed in the `data_resources` section of the config.
 
-- **Reference assembly genome:**
+- **Reference assembly genome GRCh38:**
 This file corresponds to `reference_genome` in the config and is **NOT provided** in the pipeline due to its size.
 Download the file from the [NCBI FTP Server](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/) and unzip:
 ```
